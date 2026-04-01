@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+</head>
+<body>
+
+<h2>Enter Username</h2>
+<input id="username" placeholder="Enter name">
+<button onclick="login()">Enter Chat</button>
+
+<script>
+function login(){
+    const name = document.getElementById('username').value.trim();
+    if(!name) return alert("Enter name!");
+    localStorage.setItem('username', name);
+    window.location = "chat.html";
+}
+</script>
+
+</body>
+</html>
